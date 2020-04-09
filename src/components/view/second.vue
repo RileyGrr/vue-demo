@@ -12,22 +12,40 @@
 
 <script>
 import confirm from '../sub/Confirm'
+import store from '@/store/store'
+import { apiAddress } from '@/request/api';// 导入我们的api接口
 
 export default {
   name: 'first',
+  store,
   components: {
     confirm
   },
   data(){
     return {
-      msg: '122131',
-      hide: false // loading控件显示隐藏控制
+      msg: store.state.count,
+      hide: false, // loading控件显示隐藏控制
     }
+  },
+  created () {
+    this.onLoad();
   },
   methods: {
     getMessage(val){
       console.log(val)
-    }
+    },
+    // 获取数据
+  onLoad() {
+    // 调用api接口，并且提供了两个参数
+    apiAddress({
+        type: 0,
+        sort: 1
+    }).then(res => {
+        // 获取数据成功后的其他操作
+      console.log(RES)
+    })
+  }
+    
   }
 }
 </script>
