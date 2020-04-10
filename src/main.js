@@ -5,11 +5,15 @@ import App from './App'
 import store from './store/store'
 import router from './router'
 import ElementUI from 'element-ui'
+import 'lib-flexible/flexible.js'
+// import Vant from 'vant'
+// import 'vant/lib/index.css'
 import 'element-ui/lib/theme-chalk/index.css'
 import loading from './components/loading' //引入全局loading动画
 
 Vue.use(loading)
 Vue.use(ElementUI)
+// Vue.use(Vant)
 
 Vue.config.productionTip = false
 
@@ -19,5 +23,5 @@ new Vue({
   router,
   store,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
 })

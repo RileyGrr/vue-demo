@@ -13,7 +13,7 @@
 <script>
 import confirm from '../sub/Confirm'
 import store from '@/store/store'
-import { apiAddress } from '@/request/api';// 导入我们的api接口
+import { apiNewTreeCarousel } from '@/request/api';// 导入我们的api接口
 
 export default {
   name: 'first',
@@ -27,25 +27,24 @@ export default {
       hide: false, // loading控件显示隐藏控制
     }
   },
-  created () {
-    this.onLoad();
+  created () {  
+    this.getApiaddress()
   },
   methods: {
     getMessage(val){
       console.log(val)
     },
-    // 获取数据
-  onLoad() {
-    // 调用api接口，并且提供了两个参数
-    apiAddress({
-        type: 0,
-        sort: 1
-    }).then(res => {
+    getApiaddress(){
+      console.log('AASSS')
+      // 获取数据
+      // 调用api接口，并且提供了两个参数
+      apiNewTreeCarousel({
+        count_filter: 3
+      }).then(res => {
         // 获取数据成功后的其他操作
-      console.log(RES)
-    })
-  }
-    
+        console.log(res)
+      })
+    }   
   }
 }
 </script>

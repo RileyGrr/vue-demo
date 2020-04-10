@@ -8,7 +8,7 @@ import { Toast } from 'vant'; // vant的toast提示框组件，大家可根据�
 
 // 环境的切换
 if (process.env.NODE_ENV == 'development') {
-	axios.defaults.baseURL = 'https://www.baidu.com';}
+	axios.defaults.baseURL = 'http://crpapitest.liuxue.com:8039';}
 else if (process.env.NODE_ENV == 'debug') {
 	axios.defaults.baseURL = 'https://www.ceshi.com';
 }
