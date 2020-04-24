@@ -1,5 +1,7 @@
 <template>
   <div id="first" v-loading="loading">
+    <toggle1></toggle1>
+    <toggle2></toggle2>
     <!-- 引用vuex -->
     <div @click="add()">添加</div>
     <div>
@@ -39,6 +41,9 @@ import confirm from '../sub/Confirm'
 import quiBtn from '../qiuButton.vue' /*引用*/
 import quiNav from '../quiNav.vue'
 import store from '@/store/store'
+import toggle1 from '../toggle1.vue'
+import toggle2 from '../toggle2.vue'
+
 import { mapState,mapMutations,mapGetters,mapActions  } from 'vuex';
 
 export default {
@@ -47,6 +52,8 @@ export default {
     confirm,
     'qiu-Btn': quiBtn, // BUTTON按钮设置别名
     'qui-Nav': quiNav, // 导航组件
+    'toggle1': toggle1,
+    'toggle2': toggle2
   },
   data(){
     return {

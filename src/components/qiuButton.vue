@@ -11,7 +11,7 @@
   export default {
     name:"button",
     // props是专门用来暴露组件的属性接口的
-    props: {
+    props: {     
       msg: {
         default: '下载'
       }

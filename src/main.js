@@ -5,14 +5,17 @@ import App from './App'
 import store from './store/store'
 import router from './router'
 import ElementUI from 'element-ui'
+// import { mixins } from '@/mixins'
 import 'lib-flexible/flexible.js'
 // import Vant from 'vant'
 // import 'vant/lib/index.css'
 import 'element-ui/lib/theme-chalk/index.css'
 import loading from './components/loading' //引入全局loading动画
+import '../node_modules/echarts/map/js/world.js'
 
 Vue.use(loading)
 Vue.use(ElementUI)
+// Vue.mixin(mixins) //
 // Vue.use(Vant)
 
 Vue.config.productionTip = false
